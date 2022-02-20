@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block content %}
+	<section class="container py-5">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+					<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+						<span>{{ message }}</span>
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				{% for post in all_posts %}
+					<article class="card mb-3">
+						<header class="card-header">
+							{{ post.title }}
+						</header>
+						<main class="card-body">
+							<p class="card-text">{{ post.body | truncate(25) | safe }}</p>
+						</main>
+						<footer class="card-footer d-flex justify-content-between">
+							<a href="{{ url_for('post', pk=post.pk) }}" class="btn btn-primary">Read More</a>
+							<div>
+								<a href="{{ url_for('update', pk=post.pk) }}" class="btn btn-warning">Update</a>
+								<a href="{{ url_for('delete', pk=post.pk) }}" class="btn btn-danger">Delete</a>
+							</div>
+						</footer>
+					</article>
+				{% endfor %}
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</section>
+{% endblock %}
