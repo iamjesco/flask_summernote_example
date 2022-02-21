@@ -7,6 +7,11 @@ But the one thing I like about Summernote is that you can just upload images to 
 any extra code. It all just gets saved in Html code. (with the added text formatting) 
 Less of a hassle and a quick fix. 
 
+### App details
+
+* There's no login or user system. I made this as barebones as possible. 
+* I used bootstrap for the layout to keep it simple and fast.
+
 ### Summernote issues
 
 * Still have not figured out how to update the Summernote text current. Current workaround is to copy/paste the whole text block/paragraph.
