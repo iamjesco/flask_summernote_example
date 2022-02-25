@@ -5,7 +5,7 @@ Summernote is a Rich Text Editor written primarily in bootstrap/js/jquery.
 There are a several other Rich text editor pluggins I could've used, like CKEditor for example. 
 But the one thing I like about Summernote is that you can just upload images to your post without needing 
 any extra code. It all just gets saved in Html code. (with the added text formatting) 
-Less of a hassle and a quick fix. 
+Less of a hassle and a quick fix. This is basically a To-Do app with a fancy rich text editor :-) 
 
 ### App details
 
